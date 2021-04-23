@@ -1,2 +1,1 @@
-# ladyns
-LaDynS: Latent Dynamic Analysis via Sparse Banded Graphs
+# LaDynS: Latent Dynamic Analysis via Sparse Banded Graphs
