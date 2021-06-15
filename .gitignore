@@ -4,9 +4,11 @@ __pycache__/
 *$py.class
 
 # C extensions
+# *.so
 
 # Distribution / pac
 .Python
+# build/
 develop-eggs/
 dist/
 downloads/
