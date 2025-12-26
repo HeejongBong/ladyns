@@ -14,6 +14,8 @@ Package `ladyns` requires:
 2. `numpy` >= 1.8
 3. `matplotlib` and `scipy`.
 
+While `ladyns` can run under the most recent dependencies, the current example codes require `numpy<2` and `scipy==1.11.1`.
+
 ### `Git` clone
 
 Clone this repo through github:
@@ -21,11 +23,20 @@ Clone this repo through github:
 git clone https://github.com/HeejongBong/ladyns.git
 ```
 
+### `conda` environment setup
+
+```bash
+conda create -n ladyns python=3.11 -c conda-forge
+conda activate ladyns
+conda install -c conda-forge 'scipy==1.11.1' 'numpy<2' matplotlib openblas libblas liblapack pkg-config cmake compilers meson-python meson ninja pandas pyarrow tqdm scikit-learn ffmpeg h5py
+```
+
 ### `Python` install
 
-Install package `ladyns` using setup.py script:
+Install package `ladyns` using `pip`:
 ```bash
-python setup.py install
+cd directory/to/ladyns
+pip install -v .
 ```
 
 ## Experimental data 
@@ -34,10 +45,10 @@ The data are available in `/data/`. The data file consists of `lfp_bred_1.mat`, 
 
 ## Reproducible Ipython notebooks
 
-The scripts are available in `/example/`. The scripts for the simulation analysis are provided in `Python` notebook from `3_1_...ipynb` to `3_3_...ipynb`. The scripts for the experimental data analysis are provided in `Python` notebook `4_1_analyze_experimental_data.ipynb`
+The scripts are available in `/example/`. The scripts for the simulation analysis are provided in `Python` notebook from `1_1_...ipynb` to `3_8_...ipynb`. The scripts for the experimental data analysis are provided in `Python` notebook from `4_1_...ipynb` to `4_2_...ipynb`.
 
 ## References
 
-<a name="BYSVK20"> [1] Bong, H., Yttri, E., Smith, M. A., Ventura, V., & Kass, R. E. (2020). Latent Dynamic Factor Analysis of High-Dimensional Neural Recordings. *Submitted to Annals of Applied Statistics*. </a>
+<a name="BYSVK20"> [1] Bong, H., Yttri, E., Smith, M. A., Ventura, V., & Kass, R. E. (2025+). Cross-Population Amplitude Coupling in High-Dimensional Oscillatory Neural Time Series. *Submitted*. </a>
 
 <a name="KSS19"> [2] Khanna, S. B., Scott, J. A., & Smith, M. A. (2020). Dynamic shifts of visual and saccade signals in prefrontal cortical regions 8Ar and FEF. *Journal of neurophysiology*. 124.6 (2020): 1774-1791. </a>
