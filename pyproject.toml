@@ -1,0 +1,22 @@
+[build-system]
+requires = [
+  "meson-python>=0.16",
+  "meson>=1.2",
+  "ninja",
+  "numpy>=1.26",   # f2py Meson backend is the modern default
+]
+build-backend = "mesonpy"
+
+[project]
+name = "ladyns"
+version = "2.0.0"
+description = "LaDynS: Latent Dynamic Analysis via Sparse Banded Graphs"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{name = "Heejong Bong", email = "bong0@purdue.edu"}]
+license = {text = "MIT"}
+dependencies = ["numpy", "matplotlib", "scipy"]
+
+[tool.meson-python]
+# optional, but handy when you debug builds
+# meson-args = ["-Dbuildtype=release"]
